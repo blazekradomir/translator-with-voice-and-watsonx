@@ -20,7 +20,7 @@ This tutorial demonstrates how you can deploy a single-container Text-to-Speech 
 IBM Entitled Registry contains various container images for Watson Speech. Once you've obtained the entitlement key from the [container software library](https://myibm.ibm.com/products-services/containerlibrary), you can login to the registry with the key, and pull the container images to your local machine.
 
 ```sh
-echo $IBM_ENTITLEMENT_KEY | docker login -u cp --password-stdin cp.icr.io
+echo $eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJJQk0gTWFya2V0cGxhY2UiLCJpYXQiOjE3NTQyMTcyMTksImp0aSI6IjIxYzQzZTFlYmU2YjQ0NDY5ZTc4Nzk2OGViYjFkNmY1In0.r1y2iXmD4rZIGFbOR2ey9QxAQ_lQPICBf1i5bw0eo38 | docker login -u cp --password-stdin cp.icr.io
 ```
 
 ### Step 2: Ensure you're in the correct directory

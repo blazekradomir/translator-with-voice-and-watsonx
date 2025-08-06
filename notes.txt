@@ -1,0 +1,87 @@
+Starting Speech-to-Text
+Skills Network provides its own Watson Speech-to-Text image that is
+ run automatically in this environment. To access it, 
+ use this endpoint URL: https://sn-watson-stt.labs.skills.network
+
+ curl https://sn-watson-stt.labs.skills.network/speech-to-text/api/v1/models
+
+Odpoved:
+ {
+   "models": [
+       {
+         "name": "es-LA_Telephony",
+         "language": "es-LA",
+         "description": "Latin American Spanish telephony model for narrowband audio (8kHz)",
+          ...
+      },
+      {
+         "name": "en-US_Multimedia",
+         "language": "en-US",
+         "description": "US English multimedia model for broadband audio (16kHz or more)",
+          ...
+      }
+   ]
+}
+
+Starting Text-to-Speech
+Skills Network provides its own Watson Text-to-Speech image that 
+is run automatically in this environment. To access it,
+ use this endpoint URL: https://sn-watson-tts.labs.skills.network
+
+You can test it works by running this query:
+
+1
+curl https://sn-watson-tts.labs.skills.network/text-to-speech/api/v1/voices
+
+Copied!
+
+Wrap Toggled!
+
+Executed!
+You should see a list of a bunch of different voices this model
+ can use. An example output is shown below.
+
+{
+   "voices": [
+      {
+         "name": "en-US_OliviaV3Voice",
+         "language": "en-US",
+         "gender": "female",
+         "description": "Olivia: American English female voice. Dnn technology.",
+         ...
+      },
+      {
+         "name": "es-ES_EnriqueV3Voice",
+         "language": "en-GB",
+         "gender": "male",
+         "description": "Enrique: Castilian Spanish (español castellano) male voice. Dnn technology.",
+         ...
+      },
+      ...
+   ]
+}
+
+API endpoint: https://cloud.ibm.com
+Region: us-south
+
+text to speach service:
+{
+  "apikey": "4q7t2JKH8r0f-8XkvnV83VrIVEHnHYRxU8MQQdOjkZF1",
+  "iam_apikey_description": "Auto-generated for key crn:v1:bluemix:public:text-to-speech:us-south:a/7e4582f8f1254e3088f13e2492b9aa7b:4f032f09-c30f-42e7-9405-ee7e3c8feb3c:resource-key:dceb9330-71c4-48ed-abc5-76ea2cd8da28",
+  "iam_apikey_id": "ApiKey-0b78fac5-3b9e-4cd6-88f0-0734ab88a431",
+  "iam_apikey_name": "Service-credentials-1",
+  "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Manager",
+  "iam_serviceid_crn": "crn:v1:bluemix:public:iam-identity::a/7e4582f8f1254e3088f13e2492b9aa7b::serviceid:ServiceId-5ab139c6-575e-4909-a13d-9952eed5833d",
+  "url": "https://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/4f032f09-c30f-42e7-9405-ee7e3c8feb3c"
+}
+
+speech to text service:
+{
+  "apikey": "ZdD_ghR1TQekxwzLgx4DHOIZqrnyzO6Mp1FPRpix-IyZ",
+  "iam_apikey_description": "Auto-generated for key crn:v1:bluemix:public:speech-to-text:us-south:a/7e4582f8f1254e3088f13e2492b9aa7b:4f4e6e67-06b4-4e45-8070-db38744f6d87:resource-key:e2d897b0-b54d-4f91-bdcb-1698240dd259",
+  "iam_apikey_id": "ApiKey-cb38096b-6ea6-422f-a922-a6208c56041d",
+  "iam_apikey_name": "Auto-generated service credentials",
+  "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Manager",
+  "iam_serviceid_crn": "crn:v1:bluemix:public:iam-identity::a/7e4582f8f1254e3088f13e2492b9aa7b::serviceid:ServiceId-6eabe85c-286f-4208-b55c-2358a233bfc5",
+  "url": "https://api.us-south.speech-to-text.watson.cloud.ibm.com/instances/4f4e6e67-06b4-4e45-8070-db38744f6d87"
+}
